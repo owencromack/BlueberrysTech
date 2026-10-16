@@ -43,36 +43,21 @@
           <div class="search-wrap"><span>⌕</span><input id="searchInput" type="search" placeholder="Search tools…" aria-label="Search bookmarklets"></div>
         </div>
 
-        <div class="notice"><span class="notice-icon">ⓘ</span><p><strong>One bookmarklet, a whole toolkit.</strong> Page Toolkit opens a floating panel with the tools listed below. Copy it, save it as a browser bookmark, then tap that bookmark while viewing a webpage.</p></div>
+        <div class="notice"><span class="notice-icon">ⓘ</span><p><strong>Copy any bookmarklet below, save it as a browser bookmark, and tap that bookmark while viewing a webpage. Page Toolkit combines several everyday controls in one floating panel.</p></div>
 
         <div class="toolkit-card">
           <div class="toolkit-top">
             <div class="toolkit-icon">🧰</div>
-            <div class="toolkit-title"><span class="pill">FEATURED TOOL</span><h3>Page Toolkit</h3><p>14 handy browser-page tools in one draggable panel.</p></div>
+            <div class="toolkit-title"><span class="pill">FEATURED TOOL</span><h3>Page Toolkit</h3><p>Six controls in a draggable panel, updated from your supplied version.</p></div>
             <span class="card-arrow">↗</span>
           </div>
-          <div class="feature-chips"><span>Page editing</span><span>Reading</span><span>Calculator</span><span>Page inspection</span></div>
-          <div class="toolkit-actions"><button class="primary-button" id="copyBookmarklet">Copy bookmarklet</button><button class="secondary-button" id="showInstall">How to install</button></div>
+          <div class="feature-chips"><span>Auto-clicker</span><span>Edit text</span><span>Ad blocker</span><span>Calculator</span><span>Dark mode</span><span>Page title</span></div>
+          <div class="toolkit-actions"><button class="primary-button" id="copyBookmarklet">Copy Page Toolkit</button><button class="secondary-button" id="showInstall">How to install</button></div>
           <p class="copy-status" id="copyStatus" aria-live="polite"></p>
         </div>
 
-        <div class="subheading"><h3>Included tools</h3><span id="toolCount">14 tools</span></div>
-        <div class="tool-grid" id="toolGrid">
-          <article class="tool-card" data-search="auto clicker click last position repeat click speed"><div class="tool-icon blue">⚡</div><h3>Auto-click last position</h3><p>Repeat clicks at the last spot you tapped on the page. Includes a speed setting.</p><span class="category">Automation</span></article>
-          <article class="tool-card" data-search="edit page text change words design mode"><div class="tool-icon purple">✏️</div><h3>Edit page text</h3><p>Temporarily make text on a webpage editable in your current tab.</p><span class="category">Page tools</span></article>
-          <article class="tool-card" data-search="hide ads advertising banners"><div class="tool-icon green">🛡️</div><h3>Hide likely ads</h3><p>Hide page elements that look like common advertising containers.</p><span class="category">Page tools</span></article>
-          <article class="tool-card" data-search="calculator math arithmetic"><div class="tool-icon orange">🧮</div><h3>Floating calculator</h3><p>Open a small calculator that can be moved around the page.</p><span class="category">Productivity</span></article>
-          <article class="tool-card" data-search="dark mode invert colors night"><div class="tool-icon purple">🌙</div><h3>Dark mode</h3><p>Apply a quick color inversion to make bright pages easier on the eyes.</p><span class="category">Appearance</span></article>
-          <article class="tool-card" data-search="reader view reading article text"><div class="tool-icon orange">📖</div><h3>Reader view</h3><p>Apply a calmer reading layout with larger text and fewer page distractions.</p><span class="category">Reading</span></article>
-          <article class="tool-card" data-search="hide images videos media"><div class="tool-icon blue">🖼️</div><h3>Hide images and videos</h3><p>Temporarily hide visual media on a page.</p><span class="category">Appearance</span></article>
-          <article class="tool-card" data-search="find search text page"><div class="tool-icon green">🔎</div><h3>Find text on page</h3><p>Search for a word or phrase in the current webpage.</p><span class="category">Navigation</span></article>
-          <article class="tool-card" data-search="statistics word count links images headings characters"><div class="tool-icon purple">📊</div><h3>Page statistics</h3><p>View word and character counts, plus counts of links, images, and headings.</p><span class="category">Page inspection</span></article>
-          <article class="tool-card" data-search="heading outline titles navigation"><div class="tool-icon orange">🧭</div><h3>Heading outline</h3><p>List the page's headings to get a quick overview of its structure.</p><span class="category">Navigation</span></article>
-          <article class="tool-card" data-search="copy page url link address"><div class="tool-icon blue">🔗</div><h3>Copy page link</h3><p>Copy the current page address to your clipboard.</p><span class="category">Clipboard</span></article>
-          <article class="tool-card" data-search="copy selected text clipboard"><div class="tool-icon green">📋</div><h3>Copy selected text</h3><p>Copy text you've selected on the webpage.</p><span class="category">Clipboard</span></article>
-          <article class="tool-card" data-search="change title rename page"><div class="tool-icon purple">🪄</div><h3>Change page title</h3><p>Change the displayed title of the page in the current tab.</p><span class="category">Customization</span></article>
-          <article class="tool-card" data-search="link inspector urls links list"><div class="tool-icon orange">🔍</div><h3>Link inspector</h3><p>Show a list of links and their addresses found on the page.</p><span class="category">Page inspection</span></article>
-        </div>
+        <div class="subheading"><h3>Bookmarklet library</h3><span id="toolCount">6 bookmarklets</span></div>
+        <div class="tool-grid" id="toolGrid"></div>
         <div class="empty-state" id="emptyState" hidden>No tools match that search. Try another word.</div>
       </section>
 
@@ -89,12 +74,12 @@
   </div>
 
   <dialog id="installDialog">
-    <div class="dialog-head"><div><p class="eyebrow">GETTING STARTED</p><h2>Install Page Toolkit</h2></div><button class="close-dialog" id="closeInstall" aria-label="Close">×</button></div>
+    <div class="dialog-head"><div><p class="eyebrow">GETTING STARTED</p><h2>Install a bookmarklet</h2></div><button class="close-dialog" id="closeInstall" aria-label="Close">×</button></div>
     <ol>
-      <li>Tap <strong>Copy bookmarklet</strong> on this page.</li>
-      <li>Create a new bookmark in your browser and name it <strong>Page Toolkit</strong>.</li>
+      <li>Tap the copy button on the bookmarklet card you want to install.</li>
+      <li>Create a new bookmark in your browser and give it the same name as the tool.</li>
       <li>Edit that bookmark and paste the copied text into its <strong>URL / address</strong> field instead of the normal website address.</li>
-      <li>Open a webpage where you want to use the tools, then tap your saved <strong>Page Toolkit</strong> bookmark.</li>
+      <li>Open a webpage where you want to use the tools, then tap your saved bookmark.</li>
     </ol>
     <p class="dialog-note">On iPad, editing a bookmark's address may be tucked inside the browser's Bookmarks menu. Some websites block bookmarklets, and browser security rules can limit clipboard or page access.</p>
     <button class="primary-button full-button" id="copyFromDialog">Copy bookmarklet</button>
