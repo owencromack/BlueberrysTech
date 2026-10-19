@@ -1,89 +1,27 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#10162b">
-  <meta name="description" content="Blueberry's Tech — a home for bookmarklets, games, and useful tools.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blueberry's Tech</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="app-shell">
-    <header class="topbar">
-      <a class="brand" href="#" aria-label="Blueberry's Tech home" data-view="home">
-        <span class="brand-mark">🫐</span>
-        <span><strong>Blueberry's Tech</strong><small>Lots of bookmarklets, games, and other utilities.</small></span>
-      </a>
-      <nav class="main-nav" aria-label="Main navigation">
-        <button class="nav-button active" data-view="bookmarklets">🧩 <span>Bookmarklets</span></button>
-        <button class="nav-button" data-view="games">🎮 <span>Games</span><em>Coming soon</em></button>
-        <button class="nav-button" data-view="utilities">🛠️ <span>Utilities</span><em>Coming soon</em></button>
-      </nav>
-    </header>
+  <header>
+    <h1>Blueberry's Tech</h1>
+    <p>Useful web tools, scripts, and bookmarklets.</p>
+  </header>
 
-    <main>
-      <section class="hero">
-        <div class="hero-copy">
-          <p class="eyebrow">WELCOME TO YOUR TECH HUB</p>
-          <h1>Small tools.<br><span>Big possibilities.</span></h1>
-          <p class="hero-text">Bookmarklets for your browser today, with games and utilities ready to join the collection later.</p>
-          <button class="primary-button" id="exploreButton">Explore bookmarklets <span>↘</span></button>
-        </div>
-        <div class="hero-art" aria-hidden="true">
-          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
-          <div class="berry">🫐</div><span class="spark spark-a">✦</span><span class="spark spark-b">✧</span>
-          <div class="floating-card"><span class="live-dot"></span> Your toolkit, in one place</div>
-        </div>
-      </section>
+  <main>
+    <section class="card-grid" id="tools-container">
+      <!-- Tools will be injected dynamically via JS -->
+    </section>
+  </main>
 
-      <section class="view-section" id="bookmarkletsView">
-        <div class="section-heading">
-          <div><p class="eyebrow">BROWSER TOOLKIT</p><h2>Bookmarklets</h2><p class="muted">Tiny tools that run on the webpage you're visiting.</p></div>
-          <div class="search-wrap"><span>⌕</span><input id="searchInput" type="search" placeholder="Search tools…" aria-label="Search bookmarklets"></div>
-        </div>
+  <footer>
+    <p>&copy; Blueberry's Tech. Hosted on GitHub Pages.</p>
+  </footer>
 
-        <div class="notice"><span class="notice-icon">ⓘ</span><p><strong>Copy any bookmarklet below, save it as a browser bookmark, and tap that bookmark while viewing a webpage. Page Toolkit combines several everyday controls in one floating panel.</p></div>
-
-        <div class="toolkit-card">
-          <div class="toolkit-top">
-            <div class="toolkit-icon">🧰</div>
-            <div class="toolkit-title"><span class="pill">FEATURED TOOL</span><h3>Utility GUI</h3><p>Six controls in a draggable panel, updated from your supplied version.</p></div>
-            <span class="card-arrow">↗</span>
-          </div>
-          <div class="feature-chips"><span>Auto-clicker</span><span>Edit text</span><span>Ad blocker</span><span>Calculator</span><span>Dark mode</span><span>Tab Cloaker</span></div>
-          <div class="toolkit-actions"><button class="primary-button" id="copyBookmarklet">Copy Utility GUI</button><button class="secondary-button" id="showInstall">How to install</button></div>
-          <p class="copy-status" id="copyStatus" aria-live="polite"></p>
-        </div>
-
-        <div class="subheading"><h3>Bookmarklet library</h3><span id="toolCount">6 bookmarklets</span></div>
-        <div class="tool-grid" id="toolGrid"></div>
-        <div class="empty-state" id="emptyState" hidden>No tools match that search. Try another word.</div>
-      </section>
-
-      <section class="view-section placeholder-view" id="gamesView" hidden>
-        <div class="placeholder-icon">🎮</div><p class="eyebrow">NEXT UP</p><h2>Games</h2><p class="muted">A home for browser games is being prepared. This section is ready for platformers, adventures, dungeon crawlers, and more.</p><span class="coming-pill">GAME LIBRARY — COMING SOON</span>
-      </section>
-
-      <section class="view-section placeholder-view" id="utilitiesView" hidden>
-        <div class="placeholder-icon">🛠️</div><p class="eyebrow">NEXT UP</p><h2>Utilities</h2><p class="muted">Useful web tools will live here. The section can grow as you add more projects to Blueberry's Tech.</p><span class="coming-pill">UTILITIES — COMING SOON</span>
-      </section>
-    </main>
-
-    <footer><span>🫐 <strong>Blueberry's Tech</strong></span><span>Made to grow with your projects.</span></footer>
-  </div>
-
-  <dialog id="installDialog">
-    <div class="dialog-head"><div><p class="eyebrow">GETTING STARTED</p><h2>Install a bookmarklet</h2></div><button class="close-dialog" id="closeInstall" aria-label="Close">×</button></div>
-    <ol>
-      <li>Tap the copy button on the bookmarklet card you want to install.</li>
-      <li>Create a new bookmark in your browser and give it the same name as the tool.</li>
-      <li>Edit that bookmark and paste the copied text into its <strong>URL / address</strong> field instead of the normal website address.</li>
-      <li>Open a webpage where you want to use the tools, then tap your saved bookmark.</li>
-    </ol>
-    <p class="dialog-note">On iPad, editing a bookmark's address may be tucked inside the browser's Bookmarks menu. Some websites block bookmarklets, and browser security rules can limit clipboard or page access.</p>
-    <button class="primary-button full-button" id="copyFromDialog">Copy bookmarklet</button>
-  </dialog>
   <script src="app.js"></script>
 </body>
 </html>
