@@ -20,3 +20,8 @@ Additional bookmarklet: `bookmarklets/edit-page-contenteditable.txt` toggles `do
 
 ## Game Hub
 The **Games** tab now includes five browser mini-games: Sky Sprint (platformer), Neon Dash (auto-runner), Snake Grid, Pixel Studio (drawing canvas), and Block Builder (a 2D block-building sandbox). They run locally in the browser and use canvas graphics; the games support touch controls where appropriate as well as keyboard input. No extra libraries or server are required.
+
+
+## Games
+
+The Game Hub includes Skybound Adventure (platforming), Neon Dash (obstacle runner), Snake Grid, Pixel Painter, Block Builder, Arcade Alley (Skee-Ball and Whack-a-Mole), Turbo Circuit (traffic-dodging racer), The Last Lighthouse (branching survival story), Fork in the Road (choice-based story with multiple endings), and Crypt Crawler (five-floor turn-based dungeon). Games run locally in the browser and use touch-friendly controls where appropriate.
