@@ -17,3 +17,6 @@ This website only copies bookmarklet text; it does not execute bookmarklets on t
 
 
 Additional bookmarklet: `bookmarklets/edit-page-contenteditable.txt` toggles `document.body.contentEditable` between `true` and `false` for editing the current page.
+
+## Game Hub
+The **Games** tab now includes five browser mini-games: Sky Sprint (platformer), Neon Dash (auto-runner), Snake Grid, Pixel Studio (drawing canvas), and Block Builder (a 2D block-building sandbox). They run locally in the browser and use canvas graphics; the games support touch controls where appropriate as well as keyboard input. No extra libraries or server are required.

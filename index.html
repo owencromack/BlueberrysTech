@@ -13,11 +13,11 @@
     <header class="topbar">
       <a class="brand" href="#" aria-label="Blueberry's Tech home" data-view="home">
         <span class="brand-mark">BT</span>
-        <span><strong>Blueberry's Tech</strong><small>Our website full of cool tech</small></span>
+        <span><strong>Blueberry's Tech</strong><small>Your little corner of the web</small></span>
       </a>
       <nav class="main-nav" aria-label="Main navigation">
         <button class="nav-button active" data-view="bookmarklets"><span>Bookmarklets</span></button>
-        <button class="nav-button" data-view="games"><span>Games</span><em>Coming soon</em></button>
+        <button class="nav-button" data-view="games"><span>Games</span></button>
         <button class="nav-button" data-view="utilities"><span>Utilities</span><em>Coming soon</em></button>
       </nav>
     </header>
@@ -27,8 +27,8 @@
         <div class="hero-copy">
           <p class="eyebrow">WELCOME TO YOUR TECH HUB</p>
           <h1>Small tools.<br><span>Big possibilities.</span></h1>
-          <p class="hero-text">Bookmarklets for your browser today, with games and utilities ready to join the collection later.</p>
-          <button class="primary-button" id="exploreButton">Explore bookmarklets</button>
+          <p class="hero-text">Browser bookmarklets and a growing collection of playable mini-games.</p>
+          <button class="primary-button" id="exploreButton">Explore bookmarklets </button>
         </div>
         <div class="hero-art" aria-hidden="true">
           <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
@@ -39,76 +39,50 @@
 
       <section class="view-section" id="bookmarkletsView">
         <div class="section-heading">
-          <div>
-            <p class="eyebrow">BROWSER TOOLKIT</p>
-            <h2>Bookmarklets</h2>
-            <p class="muted">Tiny tools that run on the webpage you're visiting.</p>
-          </div>
-          <div class="search-wrap">
-            <input id="searchInput" type="search" placeholder="Search tools…" aria-label="Search bookmarklets">
-          </div>
+          <div><p class="eyebrow">BROWSER TOOLKIT</p><h2>Bookmarklets</h2><p class="muted">Tiny tools that run on the webpage you're visiting.</p></div>
+          <div class="search-wrap"><input id="searchInput" type="search" placeholder="Search tools…" aria-label="Search bookmarklets"></div>
         </div>
 
-        <div class="notice">
-          <p><strong>Copy any bookmarklet below, save it as a browser bookmark, and tap that bookmark while viewing a webpage. Page Toolkit combines several everyday controls in one floating panel.</strong></p>
-        </div>
+        <div class="notice"><p><strong>Copy any bookmarklet below, save it as a browser bookmark, and tap that bookmark while viewing a webpage. Page Toolkit combines several everyday controls in one floating panel.</p></div>
 
         <div class="toolkit-card">
           <div class="toolkit-top">
             <div class="toolkit-icon">PT</div>
-            <div class="toolkit-title">
-              <span class="pill">FEATURED TOOL</span>
-              <h3>Utility GUI</h3>
-              <p>Six controls in a draggable panel, updated from your supplied version.</p>
-            </div>
+            <div class="toolkit-title"><span class="pill">FEATURED TOOL</span><h3>Page Toolkit</h3><p>Six controls in a draggable panel, updated from your supplied version.</p></div>
+            
           </div>
-          <div class="feature-chips">
-            <span>Auto-clicker</span><span>Edit text</span><span>Ad blocker</span><span>Calculator</span><span>Dark mode</span><span>Tab cloaker</span>
-          </div>
-          <div class="toolkit-actions">
-            <button class="primary-button" id="copyBookmarklet">Copy Utility GUI</button>
-            <button class="secondary-button" id="showInstall">How to install</button>
-          </div>
+          <div class="feature-chips"><span>Auto-clicker</span><span>Edit text</span><span>Ad blocker</span><span>Calculator</span><span>Dark mode</span><span>Page title</span></div>
+          <div class="toolkit-actions"><button class="primary-button" id="copyBookmarklet">Copy Page Toolkit</button><button class="secondary-button" id="showInstall">How to install</button></div>
           <p class="copy-status" id="copyStatus" aria-live="polite"></p>
         </div>
 
-        <div class="subheading">
-          <h3>Bookmarklet library</h3>
-          <span id="toolCount">7 bookmarklets</span>
-        </div>
+        <div class="subheading"><h3>Bookmarklet library</h3><span id="toolCount">7 bookmarklets</span></div>
         <div class="tool-grid" id="toolGrid"></div>
         <div class="empty-state" id="emptyState" hidden>No tools match that search. Try another word.</div>
       </section>
 
-      <section class="view-section placeholder-view" id="gamesView" hidden>
-        <p class="eyebrow">NEXT UP</p>
-        <h2>Games</h2>
-        <p class="muted">A home for browser games is being prepared. This section is ready for platformers, adventures, dungeon crawlers, and more.</p>
-        <span class="coming-pill">GAME LIBRARY • COMING SOON</span>
+      <section class="view-section games-view" id="gamesView" hidden>
+        <div class="section-heading game-heading"><div><p class="eyebrow">PLAY IN YOUR BROWSER</p><h2>Game Hub</h2><p class="muted">Five original mini-games with illustrated graphics and touch-friendly controls.</p></div><span class="game-count">5 PLAYABLE GAMES</span></div>
+        <div class="game-grid" id="gameGrid">
+          <button class="game-card" data-game="platformer"><span class="game-art art-platformer"><span class="scene-sun"></span><span class="scene-platform"></span><span class="scene-player"></span><span class="scene-coin"></span></span><span class="game-card-copy"><strong>Sky Sprint</strong><span>A colorful side-scrolling platform adventure. Run, jump, and collect stars.</span><em>PLAY PLATFORMER</em></span></button>
+          <button class="game-card" data-game="dash"><span class="game-art art-dash"><span class="dash-block"></span><span class="dash-spike"></span><span class="dash-player"></span></span><span class="game-card-copy"><strong>Neon Dash</strong><span>Time your jumps as the world races toward you.</span><em>PLAY RHYTHM RUNNER</em></span></button>
+          <button class="game-card" data-game="snake"><span class="game-art art-snake"><span class="snake-body"></span><span class="snake-food"></span></span><span class="game-card-copy"><strong>Snake Grid</strong><span>Guide the growing snake, eat fruit, and avoid your own tail.</span><em>PLAY SNAKE</em></span></button>
+          <button class="game-card" data-game="paint"><span class="game-art art-paint"><span class="paint-swatch swatch-one"></span><span class="paint-swatch swatch-two"></span><span class="paint-swatch swatch-three"></span><span class="paint-stroke"></span></span><span class="game-card-copy"><strong>Pixel Studio</strong><span>A free drawing canvas with colors, brush sizes, undo, and clear.</span><em>OPEN DRAWING BOARD</em></span></button>
+          <button class="game-card" data-game="sandbox"><span class="game-art art-sandbox"><span class="voxel voxel-a"></span><span class="voxel voxel-b"></span><span class="voxel voxel-c"></span><span class="voxel voxel-d"></span></span><span class="game-card-copy"><strong>Block Builder</strong><span>Build a little pixel world by breaking and placing blocks.</span><em>ENTER SANDBOX</em></span></button>
+        </div>
+        <section class="game-player" id="gamePlayer" hidden aria-live="polite"><div class="player-top"><div><p class="eyebrow">NOW PLAYING</p><h3 id="activeGameTitle">Game</h3><p id="gameInstructions" class="muted"></p></div><button id="closeGame" class="secondary-button" type="button">Back to games</button></div><div id="gameMount"></div></section>
       </section>
 
       <section class="view-section placeholder-view" id="utilitiesView" hidden>
-        <p class="eyebrow">NEXT UP</p>
-        <h2>Utilities</h2>
-        <p class="muted">Useful web tools will live here. The section can grow as you add more projects to Blueberry's Tech.</p>
-        <span class="coming-pill">UTILITIES • COMING SOON</span>
+        <p class="eyebrow">NEXT UP</p><h2>Utilities</h2><p class="muted">Useful web tools will live here. The section can grow as you add more projects to Blueberry's Tech.</p><span class="coming-pill">UTILITIES — COMING SOON</span>
       </section>
     </main>
 
-    <footer>
-      <span><strong>Blueberry's Tech</strong></span>
-      <span>Made to grow with your projects.</span>
-    </footer>
+    <footer><span><strong>Blueberry's Tech</strong></span><span>Made to grow with your projects.</span></footer>
   </div>
 
   <dialog id="installDialog">
-    <div class="dialog-head">
-      <div>
-        <p class="eyebrow">GETTING STARTED</p>
-        <h2>Install a bookmarklet</h2>
-      </div>
-      <button class="close-dialog" id="closeInstall" aria-label="Close">×</button>
-    </div>
+    <div class="dialog-head"><div><p class="eyebrow">GETTING STARTED</p><h2>Install a bookmarklet</h2></div><button class="close-dialog" id="closeInstall" aria-label="Close">×</button></div>
     <ol>
       <li>Tap the copy button on the bookmarklet card you want to install.</li>
       <li>Create a new bookmark in your browser and give it the same name as the tool.</li>
@@ -119,5 +93,6 @@
     <button class="primary-button full-button" id="copyFromDialog">Copy bookmarklet</button>
   </dialog>
   <script src="app.js"></script>
+  <script src="games.js"></script>
 </body>
 </html>
